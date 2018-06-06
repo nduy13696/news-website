@@ -28,7 +28,7 @@
                         <!-- feature_article_content -->
 
                         <div class="article_social">
-                            <?php  
+                            <?php
                             $cmtCount=DB::table('customer_comment')->where('post_id','=',$articleLG['id'])->count();
                             ?>
                             <span><i class="fa fa-comments-o"></i><a href="#">{{ $cmtCount }}</a>Comments</span>
@@ -65,7 +65,7 @@
                         <!-- feature_article_content -->
 
                         <div class="article_social">
-                            <?php  
+                            <?php
                             $cmtCount=DB::table('customer_comment')->where('post_id','=',$articleXS['id'])->count();
                             ?>
                             <span><i class="fa fa-comments-o"></i><a href="#">{{$cmtCount}}</a>Comments</span>
@@ -132,7 +132,7 @@
                 </div>
                 <!----category_article_content------>
                 <div class="media_social">
-                    <?php  
+                    <?php
                     $cmtCount=DB::table('customer_comment')->where('post_id','=',$top1['id'])->count();
                     ?>
                     <span><i class="fa fa-comments-o"></i><a href="#"><?php echo $cmtCount ?></a> Comments</span>
@@ -158,7 +158,7 @@
                         <span class="media-date"><a href="#">{{ $post['create_at'] }}</a></span>
 
                         <div class="media_social">
-                            <?php  
+                            <?php
                             $cmtCount=DB::table('customer_comment')->where('post_id','=',$post['id'])->count();
                             ?>
                             <span><a href="#"><i class="fa fa-comments-o"></i><?php echo $cmtCount ?></a> Comments</span>
@@ -169,7 +169,7 @@
         @endforeach;
         </div>
     </div>
-    <p class="divider"><a href="#">More News&nbsp;&raquo;</a></p>
+    <p class="divider"><a href="<?=action('frontend\FrontendController@postList',['slug'=>$category['slug']])?>">More News&nbsp;&raquo;</a></p>
 </div>
 <?php endforeach ; ?>
 <!-- end category sction -->
@@ -177,4 +177,3 @@
 </div>
 <!-- Left Section -->
 @stop
-

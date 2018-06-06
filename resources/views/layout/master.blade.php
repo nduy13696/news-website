@@ -54,33 +54,16 @@
 
 <div class="uc-mobile-menu-pusher">
 <div class="content-wrapper">
-    
+
 <section id="header_section_wrapper" class="header_section_wrapper">
     <div class="container">
         <div class="header-section">
             <div class="row">
                 <div class="col-md-4">
                     <div class="left_section">
-                                            <span class="date">
-                                                Sunday .
+                                            <span class="date" id='clock'>
                                             </span>
                         <!-- Date -->
-                                            <span class="time">
-                                                09 August . 2016
-                                            </span>
-                        <!-- Time -->
-                        <div class="social">
-                            <a class="icons-sm fb-ic"><i class="fa fa-facebook"></i></a>
-                            <!--Twitter-->
-                            <a class="icons-sm tw-ic"><i class="fa fa-twitter"></i></a>
-                            <!--Google +-->
-                            <a class="icons-sm inst-ic"><i class="fa fa-instagram"> </i></a>
-                            <!--Linkedin-->
-                            <a class="icons-sm tmb-ic"><i class="fa fa-tumblr"> </i></a>
-                            <!--Pinterest-->
-                            <a class="icons-sm rss-ic"><i class="fa fa-rss"> </i></a>
-                        </div>
-                        <!-- Top Social Section -->
                     </div>
                     <!-- Left Header Section -->
                 </div>
@@ -161,7 +144,7 @@
                                             <ul class="col-sm-3">
                                                 <li class="dropdown-header"><a href="<?=action('frontend\FrontendController@postList',['slug'=>$item['slug']])?>"><?=$item['name']?></a></li>
                                             </ul>
-                                        @endforeach    
+                                        @endforeach
                                         </div>
                                     </li>
                                 </ul>
@@ -257,30 +240,6 @@
 
 </section>
 <!-- Category News Section -->
-
-
-
-<section id="subscribe_section" class="subscribe_section">
-    <div class="row">
-        <form action="#" method="post" class="form-horizontal">
-            <div class="form-group form-group-lg">
-                <label class="col-sm-6 control-label" for="formGroupInputLarge">
-                    <h1><span class="red-color">Sign up</span> for the latest news</h1>
-                </label>
-
-                <div class="col-sm-3">
-                    <input type="text" id="subscribe" name="subscribe" class="form-control input-lg">
-                </div>
-                <div class="col-sm-1">
-                    <input type="submit" value="Sign Up" class="btn btn-large pink">
-                </div>
-                <div class="col-sm-2"></div>
-            </div>
-        </form>
-    </div>
-</section>
-<!-- Subscriber Section -->
-
 <section id="footer_section" class="footer_section">
     <div class="container">
         <hr class="footer-top">
@@ -422,23 +381,11 @@
             <div class="row">
                 <div class="footer">
                     <div class="col-sm-3">
-                        <div class="social">
-                            <a class="icons-sm fb-ic"><i class="fa fa-facebook"></i></a>
-                            <!--Twitter-->
-                            <a class="icons-sm tw-ic"><i class="fa fa-twitter"></i></a>
-                            <!--Google +-->
-                            <a class="icons-sm inst-ic"><i class="fa fa-instagram"> </i></a>
-                            <!--Linkedin-->
-                            <a class="icons-sm tmb-ic"><i class="fa fa-tumblr"> </i></a>
-                            <!--Pinterest-->
-                            <a class="icons-sm rss-ic"><i class="fa fa-rss"> </i></a>
-                        </div>
                     </div>
                     <div class="col-sm-6">
-                        <p>&copy; Copyright 2016-Tech News . Design by: <a href="https://uicookies.com">uiCookies</a> </p>
+                        <p>&copy; Copyright 2018 by Nhat Duy . Credit by: <a href="https://uicookies.com">uiCookies</a> </p>
                     </div>
                     <div class="col-sm-3">
-                        <p>Technology News Magazine</p>
                     </div>
                 </div>
             </div>
@@ -478,5 +425,7 @@
 
 <!-- Theme Script -->
 <script src="{{ asset('js\script.js') }}"></script>
+<!-- Current Date -->
+<script src="{{ asset('js\date.js') }}"></script>
 </body>
 </html>
