@@ -19,10 +19,10 @@ class loginController extends Controller
         if($query==1){
             Request::session()->put('login',true);
             Request::session()->put('message','Successful Login');
-            Request::session()->put('name','Tran Nhat Duy');
+            Request::session()->put('name',$usename);
             return redirect('/categories');
         }else{
-            
+
             return redirect('/admin');
         }
     }

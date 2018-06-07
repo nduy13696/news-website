@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\admin;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\CategotyRequest;
 use App\Http\Controllers\Controller;
 use App\model\models;
 use Session;
@@ -19,12 +20,12 @@ class CategoryController extends Controller
         return view('admin\categories\create',['allCategories'=>$categories]);
     }
 
-    public function save(){
-        $name = $_POST['txt_name'];
-        $slug= $_POST['txt_slug'];
-        $active= $_POST['rd_active'];
-        $position= $_POST['txt_position'];
-        $parent= $_POST['sl_parent'];
+    public function save(CategotyRequest $rq){
+        $name = $rq->txt_name;
+        $slug= $rq->txt_slug;
+        $active= $rq->rd_active;
+        $position= $rq->txt_position;
+        $parent= $rq->sl_parent;
 
         $categoryS=new models;
         $categoryS->name=$name;

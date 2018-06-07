@@ -5,6 +5,15 @@ Add new Category
 @section('content')
 
       <div class="box-body">
+        @if (count($errors) > 0)
+          <div class="alert alert-danger">
+              <ul>
+                  @foreach ($errors->all() as $error)
+                      <li>{{ $error }}</li>
+                  @endforeach
+              </ul>
+          </div>
+        @endif
         <p><a href="/categories" class='btn btn-success'>Back</a></p>
         <form action="<?= action('admin\CategoryController@save') ?>" method='post'>
             @csrf
