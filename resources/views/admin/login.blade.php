@@ -3,7 +3,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="../../index2.html"><b>Admin</b>LTE</a>
+    <a href="../../index2.html"><b>Fire</b>AWAY</a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
@@ -19,19 +19,8 @@
         <input type="password" class="form-control" placeholder="Password" name='txt_pass'>
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
-      <div class="row">
-        <div class="col-xs-8">
-          <div class="checkbox icheck">
-            <label>
-            Remember Me <input type="checkbox"> 
-            </label>
-          </div>
-        </div>
-        <!-- /.col -->
-        <div class="col-xs-4">
+      <div class="text-center">
           <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
-        </div>
-        <!-- /.col -->
       </div>
     </form>
   </div>
