@@ -13,7 +13,7 @@
     </div>
     <!-- entity_title -->
 
-    <div class="entity_meta"><a href="#" target="_self">{{ $post['create_at'] }}</a>, by: <a href="#" target="_self">Eric joan</a>
+    <div class="entity_meta"><a href="#" target="_self">{{ \Carbon\Carbon::parse($post['create_at'])->format('M-d-Y') }}</a>, by: <a href="#" target="_self">Eric joan</a>
     </div>
     <!-- entity_meta -->
 

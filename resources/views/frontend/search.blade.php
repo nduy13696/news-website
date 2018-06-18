@@ -19,7 +19,7 @@
     <!-- entity_title -->
 
     <div class="entity_meta">
-        <a href="#">{{ $item->create_at }}</a>, by: <a href="#">Eric joan</a>
+        <a href="#">{{ \Carbon\Carbon::parse($item['create_at'])->format('M-d-Y') }}</a>, by: <a href="#">Eric joan</a>
     </div>
     <!-- entity_meta -->
 

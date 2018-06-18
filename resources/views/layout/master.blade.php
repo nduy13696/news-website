@@ -187,7 +187,7 @@
         <div class="media-body">
             <h3 class="media-heading">
                 <a href="<?=action('frontend\FrontendController@post',['slug'=>$popular['slug']])?>" target="_self">{{$popular['title']}}</a>
-            </h3> <span class="media-date"><a href="#">{{$popular['create_at']}}</a></span>
+            </h3> <span class="media-date"><a href="#">{{ \Carbon\Carbon::parse($popular['create_at'])->format('M-d-Y') }}</a></span>
         </div>
     </div>
     @endforeach

@@ -19,7 +19,7 @@
                         </div>
                         <!-- feature_article_title -->
 
-                        <div class="feature_article_date"><a href="#" target="_self">{{ $articleLG['create_at'] }}</a></div>
+                        <div class="feature_article_date"><a href="#" target="_self">{{ \Carbon\Carbon::parse($articleLG['create_at'])->format('M-d-Y') }}</a></div>
                         <!-- feature_article_date -->
 
                         <div class="feature_article_content">
@@ -58,7 +58,7 @@
                         </div>
                         <!-- feature_article_title -->
 
-                        <div class="feature_article_date"><a href="#" target="_self">{{ $articleXS['create_at'] }}</a></div>
+                        <div class="feature_article_date"><a href="#" target="_self">{{ \Carbon\Carbon::parse($articleXS['create_at'])->format('M-d-Y') }}</a></div>
                         <!-- feature_article_date -->
 
 
@@ -125,7 +125,7 @@
                     <h2><a href="<?=action('frontend\FrontendController@post',['slug'=>$top1['slug']])?>" target="_self">{{ $top1['title'] }}</a></h2>
                 </div>
                 <!----category_article_title------>
-                <div class="category_article_date"><a href="{{ $top1['slug'] }}">{{ $top1['create_at'] }}</a></div>
+                <div class="category_article_date"><a href="{{ $top1['slug'] }}">{{ \Carbon\Carbon::parse($top1['create_at'])->format('M-d-Y') }}</a></div>
                 <!----category_article_date------>
                 <div class="category_article_content">
                     {{ $top1['description'] }}
@@ -155,7 +155,7 @@
                         <span class="tag purple"><?=$category->name?></span>
 
                         <h3 class="media-heading"><a href="<?=action('frontend\FrontendController@post',['slug'=>$post['slug']])?>" target="_self">{{ $post['title'] }}</a></h3>
-                        <span class="media-date"><a href="#">{{ $post['create_at'] }}</a></span>
+                        <span class="media-date"><a href="#">{{ \Carbon\Carbon::parse($post['create_at'])->format('M-d-Y') }}</a></span>
 
                         <div class="media_social">
                             <?php
